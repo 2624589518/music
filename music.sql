@@ -14,6 +14,7 @@ CREATE TABLE music_main_recommend(
 
 );
 
+
 /** 首页新歌首发表 music_main_new **/
 CREATE TABLE music_main_new(
 	newid INT PRIMARY KEY AUTO_INCREMENT,		#新歌id
@@ -31,10 +32,18 @@ CREATE TABLE music_user(
 
 );
 
-/* 用户喜欢的音乐表 music_user_yue */
+/** 用户喜欢的音乐表 music_user_yue **/
 CREATE TABLE music_user_yue(
 	yueid INT PRIMARY KEY AUTO_INCREMENT,		#用户喜欢的id
 	yuetitle VARCHAR(64),				#喜欢歌曲的名字	
 	yuename VARCHAR(64)				#喜欢歌曲的作者
 
 );
+
+/**首页歌单推荐表 music_main_recommend添加内容 **/
+insert into music_main_recommend values
+(null,'小众英文│世间所有温柔涌向你','img/music/main/57b12a31N8f4f75a3.jpg',1598.8,'为你推荐'),
+(null,'「温柔蔓延」沉浸于深情的词藻中','img/music/main/57b12a31N8f4f75a3.jpg',2757.7,'为你推荐'),
+(null,'时光故事汇:回放95后的那些年','img/music/main/57b12a31N8f4f75a3.jpg',2757.7,'为你推荐'),
+(null,'高能游戏主题歌曲精选:看我的无敌能量之手','img/music/main/57b12a31N8f4f75a3.jpg',191.7,'为你推荐'),
+(null,'[游戏必备BGM]带上这个buff夺取胜利!','img/music/main/57b12a31N8f4f75a3.jpg',2389.0,'为你推荐');
