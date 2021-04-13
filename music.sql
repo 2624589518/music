@@ -32,6 +32,7 @@ CREATE TABLE music_user(
 
 );
 
+
 /** 用户喜欢的音乐表 music_user_yue **/
 CREATE TABLE music_user_yue(
 	yueid INT PRIMARY KEY AUTO_INCREMENT,		#用户喜欢的id
@@ -47,3 +48,9 @@ insert into music_main_recommend values
 (null,'时光故事汇:回放95后的那些年','img/music/main/57b12a31N8f4f75a3.jpg',2757.7,'为你推荐'),
 (null,'高能游戏主题歌曲精选:看我的无敌能量之手','img/music/main/57b12a31N8f4f75a3.jpg',191.7,'为你推荐'),
 (null,'[游戏必备BGM]带上这个buff夺取胜利!','img/music/main/57b12a31N8f4f75a3.jpg',2389.0,'为你推荐');
+
+
+/** 用户表 music_user 添加内容 **/
+INSERT INTO  music_user values
+(null,'cxw','123'),
+(null,'liang','123');
