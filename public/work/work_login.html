@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+      <h1>用户登入</h1>
+      <h2 id="msg" style="color: red;"></h2>
+      <form action="#">
+         用户名： <input type="text" id="uname" name="uname"> <br>
+         密码： <input type="password" id="upwd" name="upwd"> <br>
+         <a href="./work_reg.html">没有账号，免费注册</a><br>
+         <input type="button" id="btn" name="button" onclick="login()" value="登入">
+      </form>
+      <script>
+        function login(){
+          // 获取用户输入内容  id 
+          var u =document.getElementById("uname").value;
+          var v =document.getElementById("upwd").value;
+          //获取h2提示信息 元素
+          //var msg = document.getElementById("msg");
+          // alert(u+"|"+v)
+
+          //先验证， 3-12位 字母数字 var reg 
+          var  reg=/^[a-zA-Z0-9]{3,12}$/
+          if(!reg.test(u)){//用户名格式有误
+              alert("亲！用户名格式有误，请检查哟~ ^_^!");
+              return;
+          }
+          if(!reg.test(v)){
+            alert("亲！密码格式有误，请检查哟~ ^_^!");
+            return;
+          }
+          //发送请求
+          // 1.创建ajax对象
+          var xhr = new XMLHttpRequest();
+
+           // 2.绑定修改状态事件
+          xhr.onreadystatechange = function(){
+            if(xhr.readyState === 4 && xhr.status === 200){
+                var msg = xhr.responseText;
+                if(msg==1){
+                    //成功
+                  location.href="work_list.html"
+                 }else{
+                alert("用户名或密码有误，请重试");
+                 }
+               }
+            }
+          var url=`http://127.0.0.1:8080/v1/users/login?uname=${u}&upwd=${v}`;
+          alert(url);
+          xhr.open("GET",url,true);
+          xhr.send()
+          // 接收返回数据
+
+           
+      }
+
+      </script>
+</body>
+</html>
