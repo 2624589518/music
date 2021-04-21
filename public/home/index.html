@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,36 +8,39 @@
   <link rel="stylesheet" href="./css/top.css">
   <link rel="stylesheet" href="./css/article.css">
   <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/reset.css">
 </head>
+
 <body>
   <!-- 头部 -->
   <header id="header">
-      <div class="header">
-        <!-- 导航 -->
-        <div class="header-nav">
-          <!-- logo -->
-          <div class="logo">
-            <img src="./img/logo.png" title="qq音乐" alt="qq音乐" >
-          </div>
-          <!-- 导航内容 -->
-          <ul class="list-nav">
-            <li>
-              <p>音乐馆</p>
-            </li>
-            <li>
-              <p>我的音乐</p>
-            </li>
-            <li>
-              <p>客户端</p>
-            </li>
-            <li>
-              <p>商城</p>
-            </li>
-            <li>
-              <p>VIP</p>
-            </li>
+    <div class="header">
+      <!-- 导航 -->
+      <div class="header-nav">
+        <!-- logo -->
+        <div class="logo">
+          <img src="./img/logo.png" title="qq音乐" alt="qq音乐">
+        </div>
+        <!-- 导航内容 -->
+        <ul class="list-nav">
+          <li>
+            <p>音乐馆</p>
+          </li>
+          <li>
+            <p>我的音乐</p>
+          </li>
+          <li>
+            <p>客户端</p>
+          </li>
+          <li>
+            <p>商城</p>
+          </li>
+          <li>
+            <p>VIP</p>
+          </li>
 
-          </ul>
+        </ul>
+        <div class="header-right">
           <!-- 搜索框 -->
           <input type="text" class="select" name="">
           <span>登陆</span>
@@ -49,8 +53,9 @@
             <option value="开通">充值</option>
           </select>
         </div>
-        
-        <!-- <div class="header-dao">
+      </div>
+
+      <!-- <div class="header-dao">
           <ul>
             <li>首页</li>
             <li>歌手</li>
@@ -59,108 +64,160 @@
             <li></li>
             <li></li>
           </ul> -->
-        </div>
-      </div>
+      <!-- </div> -->
+    </div>
   </header>
 
   <!-- 展示部分 -->
-  <article id="article" class="content-ceter">
+  <article id="article" >
     <!-- 第一个展示区  歌单推荐-->
     <div class="article-row">
+      <div class="article-list-tui content-ceter">
         <h2>歌单推荐</h2>
-        <div class="article-box"></div>
-    </div>
-        <!-- 第er个展示区  歌单推荐-->
-        <div class="article-row">
-          <h2>新歌首发</h2>
-          <div class="article-box"></div>
+        <ul class="list-top">
+          <li>为你推荐</li>
+          <li>网络歌曲</li>
+          <li>睡前</li>
+          <li>古风</li>
+          <li>情歌</li>
+          <li>背景音乐</li>
+        </ul>
+      <div class="article-box"></div>
       </div>
+    </div>
+    <!-- 第er个展示区  新歌-->
+    <div class="article-row">
+      <div class="article-list-new content-ceter">
+        <h2>新歌首发</h2>
+        <ul class="list-top">
+          <li>最新</li>
+          <li>内地</li>
+          <li>港台</li>
+          <li>欧美</li>
+          <li>韩国</li>
+          <li>日本</li>
+        </ul>
+      <div class="article-box"></div>
+      </div>
+    </div>
   </article>
 
   <footer id="footer" class="footer">
     <table></table>
-      <div class="footer-row1">
-          <div class="row-left">
-            <h3>下载QQ音乐客户端</h3>
-            <ul>
-              <li>
-                <p class="ico_pc"></p>
-                <p>PC版</p>
-              </li>
-              <li>
-                <p class="ico_mac"></p>
-                <p>Mac版</p>
-              </li>
-              <li>
-                <p class="ico_and"></p>
-                <p>Android版</p>
-              </li>
-              <li>
-                <p class="ico_iph"></p>
-                <p>iPhone版</p>
-              </li>
-            </ul>
-          </div>
-          <div class="row-midde">
-            <h3>特色产品</h3>
-            <ul>
-              <li>
-                <p class="ico_pc"></p>
-                <p>全面k歌</p>
-              </li>
-              <li>
-                <p class="ico_mac"></p>
-                <p>Super Sound 
-                </p>
-              </li>
-              <li>
-                <p class="ico_and"></p>
-                <p>QPlay</p>
-              </li>
-              <li>
-                <p class="ico_iph"></p>
-                <p>Fan直播伴侣</p>
-              </li>
-            </ul>
-          </div>
-          <div class="row-right">
-            <h3>合作链接</h3>
-            <ul>
-              <li>CJ ENM</li>
-              <li>腾讯视频</li>
-              <li>手机QQ空间</li>
-              <li>最新版QQ</li>
-              <li>腾讯社交广告</li>
-              <li>电脑管家</li>
-              <li>QQ浏览器</li>
-              <li>腾讯微云</li>
-              <li>腾讯云</li>
-              <li>企鹅FM</li>
-              <li>智能电视网</li>
-              <li>当贝市场</li>
-            </ul>
-          </div>
+    <div class="footer-row1">
+      <div class="row-left">
+        <h3>下载QQ音乐客户端</h3>
+        <ul>
+          <li>
+            <p class="ico_pc"></p>
+            <p>PC版</p>
+          </li>
+          <li>
+            <p class="ico_mac"></p>
+            <p>Mac版</p>
+          </li>
+          <li>
+            <p class="ico_and"></p>
+            <p>Android版</p>
+          </li>
+          <li>
+            <p class="ico_iph"></p>
+            <p>iPhone版</p>
+          </li>
+        </ul>
       </div>
-      <div class="footer-row2">
-        <div class="row2-left">
-          <h3>开放平台</h3>
-          <span>
-            QQ音乐开放平台</span>
-            <span>腾讯音乐人</span>
-        </div>
-        <div class="row2-mid">
-          <h3>TME集团官网</h3>
-          <span>
-            腾讯音乐</span>
-        </div>
-      </div >
-      <div class="footer-row3">
-        <p>关于腾讯 | About Tencent | 服务条款 | 用户服务协议 | 隐私政策 | 权利声明 | 广告服务 | 腾讯招聘 | 客服中心 | 网站导航</p>
+      <div class="row-midde">
+        <h3>特色产品</h3>
+        <ul>
+          <li>
+            <p class="ico_pc"></p>
+            <p>全面k歌</p>
+          </li>
+          <li>
+            <p class="ico_mac"></p>
+            <p>Super Sound
+            </p>
+          </li>
+          <li>
+            <p class="ico_and"></p>
+            <p>QPlay</p>
+          </li>
+          <li>
+            <p class="ico_iph"></p>
+            <p>Fan直播伴侣</p>
+          </li>
+        </ul>
+      </div>
+      <div class="row-right">
+        <h3>合作链接</h3>
+        <ul>
+          <li>CJ ENM</li>
+          <li>腾讯视频</li>
+          <li>手机QQ空间</li>
+          <li>最新版QQ</li>
+          <li>腾讯社交广告</li>
+          <li>电脑管家</li>
+          <li>QQ浏览器</li>
+          <li>腾讯微云</li>
+          <li>腾讯云</li>
+          <li>企鹅FM</li>
+          <li>智能电视网</li>
+          <li>当贝市场</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-row2">
+      <div class="row2-left">
+        <h3>开放平台</h3>
+        <span>
+          QQ音乐开放平台</span>
+        <span>腾讯音乐人</span>
+      </div>
+      <div class="row2-mid">
+        <h3>TME集团官网</h3>
+        <span>
+          腾讯音乐</span>
+      </div>
+    </div>
+    <div class="footer-row3">
+      <p>关于腾讯 | About Tencent | 服务条款 | 用户服务协议 | 隐私政策 | 权利声明 | 广告服务 | 腾讯招聘 | 客服中心 | 网站导航</p>
 
-        <p>Copyright © 1998 - 2021 Tencent. All Rights Reserved.</p>
-        
-        <p>腾讯公司 版权所有 网络文化经营许可证：粤网文[2018]6725-2386号</p>
-      </div>
+      <p>Copyright © 1998 - 2021 Tencent. All Rights Reserved.</p>
+
+      <p>腾讯公司 版权所有 网络文化经营许可证：粤网文[2018]6725-2386号</p>
+    </div>
   </footer>
 </body>
+<!--
+                                                           .                     
+                                     .;@@                     
+                        ....:;@@@@@@@   @                     
+                    ..;;;@@@            @:..                  
+                 .:@@@@@@               @@@@@:.               
+               .;@@@@@@@3             @@@@@@@@@;.             
+             .;@@@@@@@@@@      @@@@@@@;@@@@@@@@@@;.           
+            ;@@@@@@@@@@@@@    @@;@@@@@@@@@@@@@@@@@@;          
+           ;@@@@@@@@@@@@@@@@    @@@@@@@@@@@@@@@@@@@@@         
+          @@@@@@@@@@@@@@@@@@@    @@@@@@@@@@@@@@@@@@@@@        
+         :@@@@@@@@@@@@@@@@@@@@    @@@@@@@@@@@@@@@@@@@@;       
+        .@@@@@@@@@@@@@@@@@@@@@@@   @@@@@@@@@@@@@@@@@@@@.      
+        :@@@@@@@@@@@@@@@@@@@@@@@@   @@@@@@@@@@@@@@@@@@@:      
+        ;@@@@@@@@@@@@@@@@@@@@@@@@@@  @@@@@@@@@@@@@@@@@@;      
+        ;@@@@@@@@@@@@@@@@@@@@@@@@@@@   @@@@@@@@@@@@@@@@;      
+        :@@@@@@@@@@@@@@@@@@             @@@@@@@@@@@@@@@:      
+        .@@@@@@@@@@@@@@@                 @@@@@@@@@@@@@@.      
+         ;@@@@@@@@@@@@@                   @@@@@@@@@@@@;       
+          @@@@@@@@@@@@                     @@@@@@@@@@@        
+           @@@@@@@@@@                      @@@@@@@@@@         
+            ;@@@@@@@@                     @@@@@@@@@;          
+             .@@@@@@@@                   @@@@@@@@@.           
+               .@@@@@@@@               @@@@@@@@@:             
+                 .;@@@@@@@@          @@@@@@@@;.               
+                    .:@@@@@@@@@@@@@@@@@@@@:.                  
+                        ...:;;;;;;;;:...                                     
+                                                
+         交互:小陈陈 && 视觉:小星星 && 重构:小汶汶 && 前端:陈星汶
+                         QQ音乐团队倾情出品
+-->
+
 </html>
