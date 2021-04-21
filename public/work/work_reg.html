@@ -13,6 +13,8 @@
   <form action="#">
     用户名：<input type="text" id="uname" name="uname" placeholder="请输入用户名3-12位"><br>
     密码：<input type="text" id="upwd" name="pwd" placeholder="请输入密码3-12位"> <br>
+    邮箱：<input type="text" id="email" name="email" placeholder="请输入qq邮箱以qq.com结束"> <br>
+    电话：<input type="text" id="phone" name="phone" placeholder="请输入11位电话号码">  <br>
     <a href="./work_login.html">已有账号？返回登入</a><br>
     <input type="button" id="btn" value="注册" onclick="reg()"> <br>
 
@@ -24,6 +26,8 @@
       // 0. 获取用户输入 用户名和密码
       var u = document.getElementById("uname").value;
       var v = document.getElementById("upwd").value;
+      var email = document.getElementById("email").value;
+      var phone = document.getElementById("phone").value;
       // 1.1验证 设置正则表达式
       var regtext = /^[a-zA-Z0-9]{3,12}$/
       var regemail=/^[a-zA-Z0-9]*@\w*\.com$/;
@@ -36,7 +40,14 @@
       if (!regtext.test(v)) {
         msg.innerHTML = "密码格式错误"
         return;
-      }
+      }if(!regemail.test(email)){
+        msg.innerHTML="邮箱格式错误"
+          return;
+     }
+     if(!regphone.test(phone)){
+        msg.innerHTML="手机格式错误"
+          return;
+     }
       
       //alert(u+v);
       //  1.创建ajax对象
@@ -60,14 +71,14 @@
 
       }
       // 3.打开连接
-      var url = "http://127.0.0.1:8080/v1/users/reg";
+      var url = "http://127.0.0.1:8888/v1/users/reg";
       xhr.open("post", url, true);
       // 3.1 修改头类型
       xhr.setRequestHeader("Content-Type"
         , "application/x-www-form-urlencoded");
       // 4.发送请求
-      var formdata = `uid=null&uname=${u}&upwd=${v}`;
-      alert(formdata);
+      var formdata = `uid=null&uname=${u}&upwd=${v}&email=${email}&phone=${phone}`;
+      // alert(formdata);
       xhr.send(formdata);
     }
 

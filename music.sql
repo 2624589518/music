@@ -28,7 +28,10 @@ CREATE TABLE music_main_new(
 CREATE TABLE music_user(
 	uid INT PRIMARY KEY AUTO_INCREMENt,		#用户id
 	uname VARCHAR(32),				#用户名	
-	upwd VARCHAR(32)				#用户密码
+	upwd VARCHAR(32),				#用户密码
+	email VARCHAR(32),				#用户邮箱
+	phone VARCHAR(11)				#用户电话
+
 
 );
 
@@ -52,5 +55,5 @@ insert into music_main_recommend values
 
 /** 用户表 music_user 添加内容 **/
 INSERT INTO  music_user values
-(null,'cxw','123'),
-(null,'liang','123');
+(null,'cxw','123','cxw@qq.com','17623699365'),
+(null,'liang','123','liang@qq.com','13688888888');

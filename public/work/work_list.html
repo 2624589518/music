@@ -56,7 +56,7 @@
                               <td>${rows[i].phone}</td>
                                 <td>
                                  <a href="javascript:del(${rows[i].uid})"> 删除</a>
-                                 <a href="pro_detail.html?uid=${rows[i].uid}"> 查询</a>
+                                 <a href="work_detail.html?uid=${rows[i].uid}"> 查询</a>
                                 </td>
                             </tr>
                         `;
@@ -67,7 +67,7 @@
                    
                 }
           }
-          var url="http://127.0.0.1:8080/ajax/userlist";
+          var url="http://127.0.0.1:8888/v1/users/userlist";
           xhr.open("GET",url,true);
           xhr.send();
           // 接收返回数据 .显示
@@ -108,10 +108,7 @@
         // 提升删除成功或失败 
         // 刷新
       };
-      
-        
-      
-      
+            
     </script>
 </body>
 </html>

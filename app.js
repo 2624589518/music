@@ -10,7 +10,7 @@ const bodyParser = require('body-parser');
 const app =express();
 
 //设置端口
-app.listen(8080);
+app.listen(8888);
 
 //托管静态资源到public 目录
 app.use(express.static('./public'));
