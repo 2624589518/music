@@ -14,7 +14,7 @@ ul {
 #footer .footer-row1 {
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 1200px;
   height: 220px;
   margin: 50px auto;
   background-color: yellowgreen;
@@ -130,7 +130,7 @@ ul {
   width: 120px;
 }
 #footer .footer-row2 {
-  width: 80%;
+  width: 1200px;
   height: 200px;
   background-color: brown;
   margin: 10px auto;

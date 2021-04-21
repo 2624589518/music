@@ -12,20 +12,20 @@ ul {
   background-color: aliceblue;
 }
 #header .header {
-  width: 1300px;
+  width: 1200px;
   height: 78px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
 }
 #header .header .header-nav {
   width: 100%;
   height: 90px;
   display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin: 0 auto;
 }
 #header .header .header-nav .logo {
-  padding-top: 15px;
+  padding-top: 20px;
   cursor: pointer;
 }
 #header .header .header-nav .list-nav {
@@ -39,40 +39,44 @@ ul {
   height: 90px;
   background-color: aliceblue;
   text-align: center;
+  font-size: 16px;
   cursor: pointer;
 }
 #header .header .header-nav .list-nav li p {
-  font-size: 14px;
   color: black;
-  margin-top: 25px;
+  line-height: 90px;
 }
-#header .header .header-nav .select {
-  width: 160px ;
+#header .header .header-nav .list-nav li:hover {
+  background-color: #31C27C;
+}
+#header .header .header-nav .list-nav li:hover p {
+  color: white;
+}
+#header .header .header-nav .header-right .select {
+  width: 160px;
   height: 25px;
-  margin-top: 25px;
+  margin-top: 30px;
   margin-left: 10px;
+  border-radius: 5px;
 }
-#header .header .header-nav span {
+#header .header .header-nav .header-right span {
   margin-left: 20px;
-  margin-top: 25px;
-  font-size: 14px;
+  margin-top: 35px;
+  font-size: 16px;
 }
-#header .header .header-nav #select {
+#header .header .header-nav .header-right #select {
   width: 90px;
   height: 30px;
   background-color: greenyellow;
+  border-radius: 5px;
   margin-top: 25px;
   margin-left: 25px;
 }
-#header .header .header-nav #select2 {
+#header .header .header-nav .header-right #select2 {
   width: 90px;
   height: 30px;
   background-color: white;
+  border-radius: 5px;
   margin-top: 25px;
   margin-left: 10px;
-}
-#header .header .header-dao {
-  width: 100%;
-  height: 90px;
-  background-color: yellow;
 }
