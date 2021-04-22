@@ -1,0 +1,60 @@
+#banner {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+#banner #prev {
+  left: 0px;
+}
+#banner ul {
+  width: 7200px;
+  height: 400px;
+  position: absolute;
+  display: flex;
+}
+#banner ul li {
+  width: 580px;
+  height: 240px;
+  margin: 0px 10px;
+}
+#banner ul li img {
+  width: 100%;
+  height: 100%;
+}
+#banner button {
+  width: 40px;
+  height: 70px;
+  background: none;
+  background-color: #E2E2E2;
+  border: 1px solid gray;
+  color: #333333;
+  font-size: 25px;
+  position: absolute;
+  top: 80px;
+  outline: none;
+}
+#banner button:nth-of-type(2) {
+  right: 0;
+}
+#banner ol {
+  position: absolute;
+  right: 450px;
+  bottom: 10px;
+  width: 300px;
+  height: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+#banner ol li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: grey;
+  box-sizing: border-box;
+  border: 2px solid #c8c8c8;
+  cursor: pointer;
+}
+#banner ol .cls {
+  background: #fafafa;
+}

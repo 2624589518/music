@@ -4,23 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/work_reg.css">
   <script src="./js/work_reg.js"></script>
   <title> 用户注册</title>
 </head>
 
 <body>
-  <h1>用户注册</h1>
-  <h2 id="msg" style="color: red;">信息</h2>
-  <form action="#">
-    用户名：<input type="text" id="uname" name="uname" placeholder="请输入用户名3-12位"><br>
-    密码：<input type="text" id="upwd" name="pwd" placeholder="请输入密码3-12位"> <br>
-    邮箱：<input type="text" id="email" name="email" placeholder="请输入qq邮箱以qq.com结束"> <br>
-    电话：<input type="text" id="phone" name="phone" placeholder="请输入11位电话号码">  <br>
-    <a href="./work_login.html">已有账号？返回登入</a><br>
-    <input type="button" id="btn" value="注册" onclick="reg()"> <br>
+  <div class="reg">
+    <h1>欢迎注册 Q音乐</h1>
+    <h2 id="msg" style="color: red;">每一天,乐在沟通</h2>
+    <form action="#">
+      用户名：<input type="text" id="uname" name="uname" placeholder="请输入用户名3-12位"><br>
+      密码：<input type="text" id="upwd" name="pwd" placeholder="请输入密码3-12位"> <br>
+      邮箱：<input type="text" id="email" name="email" placeholder="请输入qq邮箱以qq.com结束"> <br>
+      电话：<input type="text" id="phone" name="phone" placeholder="请输入11位电话号码"> <br>
+      <a href="./work_login.html">已有账号？返回登入</a><br>
+      <input type="button" id="btn" value="注册" onclick="reg()"> <br>
 
-  </form>
-  
+    </form>
+  </div>
+
 </body>
 
 </html>

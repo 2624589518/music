@@ -1,0 +1,15 @@
+.login {
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+  background-color: burlywood;
+  margin: 200px auto;
+}
+.login input {
+  width: 480px;
+  height: 50px;
+  margin-left: 6px;
+}
+.login input:nth-child(end) {
+  margin-left: 8px;
+}

@@ -12,13 +12,13 @@ ul {
 }
 #article .article-row {
   width: 100%;
-  height: 578px;
   margin: 0 auto;
   text-align: center;
+  box-sizing: border-box;
 }
 #article .article-row .article-list-tui {
-  height: 100%;
   border: 1px solid black;
+  height: 578px;
 }
 #article .article-row .article-list-tui h2 {
   font-size: 30px;
@@ -35,7 +35,7 @@ ul {
   margin: 0 25px;
 }
 #article .article-row .article-list-new {
-  height: 100%;
+  height: 578px;
   border: 1px solid black;
 }
 #article .article-row .article-list-new h2 {
@@ -51,6 +51,15 @@ ul {
   font-size: 14px;
   float: left;
   margin: 0 25px;
+}
+#article .article-row .artice-list-lun {
+  height: 420px;
+  border: 1px solid black;
+}
+#article .article-row .artice-list-lun h2 {
+  font-size: 30px;
+  padding-top: 55px;
+  margin-bottom: 35px;
 }
 #article .article-row:nth-child(2n) {
   background-color: white;

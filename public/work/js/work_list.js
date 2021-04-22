@@ -1,5 +1,5 @@
 
-function deleter(){}
+// function deleter(){}
 // 页面加载成功
 window.onload=function(){
     //alert(2);
@@ -68,7 +68,7 @@ function del(uid){
           }
       }
   }
-  var url=`http://127.0.0.1:8080/ajax/restful_del/${uid}`;
+  var url=`http://127.0.0.1:8888/v1/users/del/${uid}`;
   //alert(url);
   xhr.open("delete",url,true);
   xhr.send();

@@ -4,11 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
   <link rel="stylesheet" href="./css/top.css">
   <link rel="stylesheet" href="./css/article.css">
   <link rel="stylesheet" href="./css/footer.css">
   <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/lun.css">
+  <title>Document</title>
+ <style>
+      /* .cls{
+            background: rgb(250,250,250);
+        } */
+ </style>
 </head>
 
 <body>
@@ -43,7 +49,7 @@
         <div class="header-right">
           <!-- 搜索框 -->
           <input type="text" class="select" name="">
-          <span>登陆</span>
+          <a href="#"><span>登陆</span></a>
           <!-- 下拉框 -->
           <select name="" id="select">
             <option value="开通VIP">开通vip</option>
@@ -69,7 +75,7 @@
   </header>
 
   <!-- 展示部分 -->
-  <article id="article" >
+  <article id="article">
     <!-- 第一个展示区  歌单推荐-->
     <div class="article-row">
       <div class="article-list-tui content-ceter">
@@ -82,7 +88,7 @@
           <li>情歌</li>
           <li>背景音乐</li>
         </ul>
-      <div class="article-box"></div>
+        <div class="article-box"></div>
       </div>
     </div>
     <!-- 第er个展示区  新歌-->
@@ -97,7 +103,30 @@
           <li>韩国</li>
           <li>日本</li>
         </ul>
-      <div class="article-box"></div>
+        <div class="article-box"></div>
+      </div>
+    </div>
+  <!-- 第三个部分 精彩推荐轮播 -->
+    <div class="article-row">
+      <div class="artice-list-lun content-ceter">
+          <h2>精彩推荐</h2>
+          <div id="banner">
+            <ul id="bann">
+                <li><img src="./img/3865182.jpg" alt=""></li>
+                <li><img src="./img/3867169.gif" alt=""></li>
+                <li><img src="./img/3870412.jpg" alt=""></li>
+                <li><img src="./img/3874021.jpg" alt=""></li>
+                <li><img src="./img/3875006.jpg" alt=""></li>
+                <li><img src="./img/3877717.jpg" alt=""></li>
+                <li><img src="./img/3878820.jpg" alt=""></li>
+                <li><img src="./img/3879366.jpg" alt=""></li>
+                <li><img src="./img/3865182.jpg" alt=""></li>
+                <li><img src="./img/3867169.gif" alt=""></li>       
+            </ul>
+            <button id="prev"><</button>
+            <button id="next">></button>
+            <ol id="ol"><li class="cls"></li><li></li><li></li><li></li></ol>
+        </div>
       </div>
     </div>
   </article>
@@ -187,6 +216,118 @@
       <p>腾讯公司 版权所有 网络文化经营许可证：粤网文[2018]6725-2386号</p>
     </div>
   </footer>
+  <!-- 轮播 -->
+  <script>
+    var banner = document.getElementById("banner");
+    var prev = document.getElementById("prev");
+    var next = document.getElementById("next");
+    var ul = document.getElementById("bann");
+    var ul_li = ul.getElementsByTagName("li");
+    var ol = document.getElementById("ol");
+    var ol_li = ol.getElementsByTagName("li");
+    var kuan = banner.offsetWidth;
+    // 创建一个变量，当成找到图片的下标值
+    var index = 0;
+    var num = 0;
+    var timer;
+    var timer1;
+    // console.log(ul.offsetLeft);
+
+    next.onclick = function(){
+        index++;
+        if(index>(ul_li.length)/2-1){
+            index = 1;
+            ul.style.left = 0;
+        }
+        run(ul,-index*kuan);
+        num++;
+        num = index;
+        for(var i=0;i<ol_li.length;i++){
+            ol_li[i].className = "";
+        }
+        if(num>ol_li.length-1){
+            num = 0;
+        }
+        ol_li[num].className = "cls";
+    }
+    prev.onclick = function(){
+        index--;
+        if(index<0){
+            index = (ul_li.length)/2-2  ;
+            ul.style.left = -((ul_li.length)/2-1)*kuan+"px";
+        }
+        run(ul,-index*kuan);
+        num--;
+        num = index;
+        for(var i=0;i<(ol_li.length);i++){
+            ol_li[i].className = "";
+        }
+        if(num<0){
+            num = ol_li.length-1;
+        }
+        ol_li[num].className = "cls";
+    }
+
+    var bian = function(){
+        index++;
+        if(index>(ul_li.length)/2-1){
+            index = 1;
+            ul.style.left = 0;
+        }
+        run(ul,-index*kuan);
+        num++;
+        num = index;
+        for(var i=0;i<ol_li.length;i++){
+            ol_li[i].className = "";
+        }
+        if(num>ol_li.length-1){
+            num = 0;
+        }
+        ol_li[num].className = "cls";
+    }
+
+    timer1 = setInterval(bian,2500);
+
+    banner.onmouseover = function(){
+        clearInterval(timer1);
+
+        for(var i=0;i<ol_li.length;i++){
+            ol_li[i].zhi = i;
+            ol_li[i].onclick = function(){
+                index = this.zhi;
+                for(var j=0;j<ol_li.length;j++){
+                    ol_li[j].className = "";
+                }
+                this.className = "cls";
+                run(ul,-index*kuan);
+            }
+        }
+
+    }
+
+    banner.onmouseout = function(){
+        timer1 = setInterval(bian,2500);
+    }
+
+
+    // 轮播图运动过程封装
+    function run(attr,place){
+        // attr是元素，place是最后移动完的位置
+        clearInterval(timer);
+        timer = setInterval(function(){
+            var chushi = attr.offsetLeft;
+            var temp = (place-chushi)/10;
+            // console.log(temp);
+            if(temp>0){
+                temp = Math.ceil(temp);
+            }else{
+                temp = Math.floor(temp);
+            }
+            chushi = chushi + temp;
+            attr.style.left = chushi +"px";
+        },20)
+    }
+</script>
 </body>
 <!--
                                                            .                     

@@ -9,7 +9,9 @@ ul{list-style: none;}
   width: 100%;
   height: 640px;
   background-color: #333333;
-
+  span:hover{
+    color: #31c27c ;
+  }
   .footer-row1{
     display: flex;
     // flex-wrap: nowrap;
@@ -19,18 +21,27 @@ ul{list-style: none;}
     width: 1200px;
     height: 220px;
     margin: 50px auto;
-    background-color: yellowgreen;
+    color: #999999;
+    // background-color: yellowgreen;
+    li:hover{
+      color: #31c27c;
+    }
+  
     .row-left{
       width: 380px;
       height: 200px;
-      background-color: blue;
-      border: 1px solid black;
+      // background-color: blue;
+      // border: 1px solid black;
       float: left;
       font-size: 12px;
+      h3{
+        font-size: 16px;
+      }
       ul{
         width: 360px;
         height: 100px;
-        border: 1px solid black;
+        // border: 1px solid black;
+        margin-top: 40px;
         .ico_pc{
           margin: 10px auto;
           height: 48px;
@@ -76,13 +87,17 @@ ul{list-style: none;}
     .row-midde{ 
       width: 380px;
       height: 200px;
-      border: 1px solid black;
+      // border: 1px solid black;
       float: left;
       font-size: 12px;
+      h3{
+        font-size: 16px;
+      }
       ul{
         width: 360px;
         height: 100px;
-        border: 1px solid black;
+        // border: 1px solid black;
+        margin-top: 40px;
         .ico_pc{
           margin: 10px auto;
           height: 48px;
@@ -126,17 +141,23 @@ ul{list-style: none;}
     .row-right{
       width: 380px;
       height: 200px;
-      border: 1px solid black;
+      // border: 1px solid black;
       float: left;
       font-size: 12px;
+      h3{
+        font-size: 16px;
+      }
       ul{
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-        height: 200px;
-        border: 1px solid black;
+        height: 160px;
+        // border: 1px solid black;
+        margin-top: 30px;
         li{
-          width: 120px;
+          width: 100px;
+          height: 40px;
+          line-height: 40px;
         }
       }
     }
@@ -144,24 +165,30 @@ ul{list-style: none;}
   .footer-row2{
     width: 1200px;
     height: 200px;
-    background-color: brown;
+    // background-color: brown;
     margin: 10px auto;
+    color: #999999;
+    span{
+      display: inline-block;
+      margin-top: 30px;
+    }
     .row2-left{
-      width: 500px;
+      width: 400px;
       height: 200px;
-      border: 1px solid black;
+      // border: 1px solid black;
       float: left;
     }
     .row2-mid{
-      width: 500px;
+      width: 400px;
       height: 200px;
-      border: 1px solid black;
+      // border: 1px solid black;
       float: left;
     }
   }
   .footer-row3{
+    color: #999999;
     width: 100%;
-    height: 200px;
+    // height: 200px;
     text-align: center;
   }
 }

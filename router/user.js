@@ -131,5 +131,18 @@ r.get("/find",(req,res)=>{
     res.send(result);
 	});
 });
+//delete方法删除,不能再地址栏验证
+r.delete("/del/:uid",(req,res)=>{
+	var _uid=req.params.uid;
+	var sql="delete from music_user where uid=?";
+	pool.query(sql,[_uid],(err,result)=>{
+		if(err) throw err;
+		if(result.affectedRows>0){
+			res.send("1");//删除成功
+		}else{
+			res.send("0");
+		}
+	});
+});
 //导出路由器对象
 module.exports=r;
